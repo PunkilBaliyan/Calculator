@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Calculator 1</string>
+    <string name="edittext_hint"><font size="30">0</font></string>
+</resources>
