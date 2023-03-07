@@ -74,13 +74,13 @@ class MainActivity : AppCompatActivity() {
         equals.setOnClickListener{
             try { val expr = ExpressionBuilder(expression.text.toString()).build()
                 val answer = expr.evaluate()
-               "= $answer ".also { result.text = it }
+               "= $answer".also { result.text = it }
             }catch (e:Exception){
        result.text = e.message
             }
         }
         back.setOnClickListener {
-            result.text = ""
+            result.text =""
             result.hint=""
             val value = expression.text
             if(value.isNotEmpty()){
@@ -117,10 +117,10 @@ class MainActivity : AppCompatActivity() {
 
 
             if (tobecleared) {
-                result.text = ""
+                result.text =""
                 expression.append(value)
             } else {
-                expression.append(result.text)
+                expression.append(result.text.substring(2))
                 expression.append(value)
                 result.text = ""
             }
