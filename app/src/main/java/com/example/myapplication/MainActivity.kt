@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity() {
         equals.setOnClickListener{
             try { val expr = ExpressionBuilder(expression.text.toString()).build()
                 val answer = expr.evaluate()
-               "= $answer".also { result.text = it }
+               result.text = answer.toString()
             }catch (e:Exception){
        result.text = e.message
             }
@@ -120,7 +120,7 @@ class MainActivity : AppCompatActivity() {
                 result.text =""
                 expression.append(value)
             } else {
-                expression.append(result.text.substring(2))
+                expression.append(result.text)
                 expression.append(value)
                 result.text = ""
             }
